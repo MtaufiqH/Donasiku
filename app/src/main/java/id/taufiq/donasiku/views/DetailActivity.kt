@@ -26,11 +26,17 @@ class DetailActivity : AppCompatActivity() {
             progressBar_detail.progress = this.currentDonation.toInt()
             tv_cerita_detail.text = this.description
             Glide.with(this@DetailActivity).load(this.photo).into(iv_poster_detail)
+
+            btn_donasi.setOnClickListener {
+                Intent(this@DetailActivity,AddDonasiActivity::class.java).run {
+                    putExtra("DATAKU",this@apply)
+                    startActivity(this)
+                }
+            }
+
         }
 
-        btn_donasi.setOnClickListener {
-            startActivity(Intent(this,ActivitySuccessDonation::class.java))
-        }
+
 
 
     }

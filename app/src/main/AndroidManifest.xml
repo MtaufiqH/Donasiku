@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".views.AddDonasiActivity"></activity>
-        <activity android:name=".views.ActivitySuccessDonation" />
+        <activity android:name=".views.ActivitySuccessDonation"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
         <activity
             android:name=".views.DetailActivity"
             android:parentActivityName=".views.MainActivity" />

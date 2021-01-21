@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/whiteColor"
     tools:context=".views.ActivitySuccessDonation">
 
 
@@ -28,7 +29,7 @@
         android:textSize="16sp"
         android:fontFamily="@font/montserrat_bold"
         android:textColor="@color/colorBlack"
-        android:text="Donasi Anda Berhasil"
+        android:text="@string/donasi_anda_berhasil"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/animationView" />
