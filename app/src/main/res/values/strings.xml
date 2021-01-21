@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Donasiku</string>
+    <string name="donasiku">Donasiku</string>
+    <string name="logo_donasiku">logo donasiku</string>
+    <string name="donasi_sekarang">Donasi Sekarang!</string>
+    <string name="terkumpul_dari">terkumpul dari</string>
+    <string name="terkumpul">Terkumpul</string>
+</resources>
