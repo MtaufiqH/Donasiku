@@ -1,8 +1,11 @@
 package id.taufiq.donasiku.data.response
 
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 data class DonasiItem(
     @SerializedName("createdAt")
     val createdAt: String,
@@ -20,4 +23,4 @@ data class DonasiItem(
     val targetDonation: Long,
     @SerializedName("title")
     val title: String
-)
+) : Parcelable

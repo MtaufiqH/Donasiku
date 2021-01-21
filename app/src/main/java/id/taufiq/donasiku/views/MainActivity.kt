@@ -1,7 +1,7 @@
 package id.taufiq.donasiku.views
 
+import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
@@ -19,7 +19,11 @@ class MainActivity : AppCompatActivity() {
 
         viewmodel.allDonations.observe(this, Observer { data ->
             rv_donations.adapter = DonationAdapter(data) {
-                Toast.makeText(this, "clicked ${it.title}", Toast.LENGTH_SHORT).show()
+                Intent(this, DetailActivity::class.java).run {
+                    putExtra("DATA", it)
+                }.also {
+                    startActivity(it)
+                }
             }
         })
     }
