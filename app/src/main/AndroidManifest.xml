@@ -11,6 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".views.AddDonasiActivity"></activity>
+        <activity android:name=".views.ActivitySuccessDonation" />
         <activity
             android:name=".views.DetailActivity"
             android:parentActivityName=".views.MainActivity" />

@@ -1,5 +1,6 @@
 package id.taufiq.donasiku.views
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -28,7 +29,7 @@ class DetailActivity : AppCompatActivity() {
         }
 
         btn_donasi.setOnClickListener {
-            Toast.makeText(this, "terima kasih", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this,ActivitySuccessDonation::class.java))
         }
 
 
