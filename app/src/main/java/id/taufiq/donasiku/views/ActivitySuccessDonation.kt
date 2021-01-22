@@ -18,7 +18,7 @@ class ActivitySuccessDonation : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
 
-        delayFunction({toMain()},2500)
+        delayFunction({toMain()},3000)
     }
 
     private fun toMain(){
