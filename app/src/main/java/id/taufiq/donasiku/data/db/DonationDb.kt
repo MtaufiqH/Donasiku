@@ -10,7 +10,6 @@ import androidx.room.RoomDatabase
  *
  */
 
-
 @Database(entities = [DonationEntity::class], version = 1, exportSchema = false)
 abstract class DonationDb : RoomDatabase() {
     abstract fun donateDao(): DonationDao
@@ -23,9 +22,13 @@ abstract class DonationDb : RoomDatabase() {
         @Synchronized
         fun getInstance(context: Context): DonationDb {
             if (INSTANCE == null) {
-                INSTANCE = Room.databaseBuilder(context, DonationDb::class.java, DB_NAME).build()
+                INSTANCE = Room.databaseBuilder(
+                    context,
+                    DonationDb::class.java,
+                    DB_NAME
+                )
+                    .build()
             }
-
             return INSTANCE!!
         }
     }
