@@ -2,12 +2,15 @@ package id.taufiq.donasiku.views
 
 import android.content.Intent
 import android.os.Bundle
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import id.taufiq.donasiku.R
 import id.taufiq.donasiku.data.network.response.DonasiItem
+import id.taufiq.donasiku.viewmodel.DonasiViewModel
 import kotlinx.android.synthetic.main.activity_add_donasi.*
 
-class AddDonasiActivity : AppCompatActivity() {
+ class AddDonasiActivity : AppCompatActivity() {
+    private val viewmodel by viewModels<DonasiViewModel>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_donasi)
@@ -32,9 +35,21 @@ class AddDonasiActivity : AppCompatActivity() {
                     }
 
                     else -> {
+                        viewmodel.insertDonation(
+                            DonasiItem(
+                                id,
+                                createdAt,
+                                currentDonation,
+                                description,
+                                photo,
+                                sourcePhoto,
+                                targetDonation,
+                                title
+                            )
+                        )
                         Intent(this@AddDonasiActivity, ActivitySuccessDonation::class.java).run {
                             startActivity(this)
-                            finish()
+
                         }
                     }
                 }

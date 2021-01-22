@@ -13,12 +13,16 @@ import id.taufiq.donasiku.R
 import id.taufiq.donasiku.adapter.DonationAdapter
 import id.taufiq.donasiku.utils.startActivity
 import id.taufiq.donasiku.viewmodel.DonasiViewModel
+import id.taufiq.donasiku.viewmodel.DonasiViewModelFactory
 import kotlinx.android.synthetic.main.activity_main.*
 
-@RequiresApi(Build.VERSION_CODES.M)
 class MainActivity : AppCompatActivity() {
 
-    private val viewmodel by viewModels<DonasiViewModel>()
+    val factory  by lazy {
+        val app  = application
+        DonasiViewModelFactory(app)
+    }
+    private val viewmodel by viewModels<DonasiViewModel> {factory}
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
