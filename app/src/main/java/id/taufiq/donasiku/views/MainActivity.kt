@@ -23,19 +23,21 @@ class MainActivity : AppCompatActivity() {
         DonasiViewModelFactory(app)
     }
     private val viewmodel by viewModels<DonasiViewModel> {factory}
+    lateinit var myAdapter : DonationAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         viewmodel.allDonations.observe(this, Observer { data ->
-            rv_donations.adapter = DonationAdapter(data) {
+            myAdapter = DonationAdapter(data){
                 Intent(this, DetailActivity::class.java).run {
                     putExtra("DATA", it)
                 }.also {
                     startActivity(it)
                 }
             }
+            rv_donations.adapter = myAdapter
         })
     }
 
