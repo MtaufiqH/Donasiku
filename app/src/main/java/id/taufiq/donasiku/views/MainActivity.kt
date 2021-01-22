@@ -3,12 +3,15 @@ package id.taufiq.donasiku.views
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import androidx.activity.viewModels
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import id.taufiq.donasiku.R
 import id.taufiq.donasiku.adapter.DonationAdapter
+import id.taufiq.donasiku.utils.startActivity
 import id.taufiq.donasiku.viewmodel.DonasiViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -30,5 +33,22 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         })
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater = menuInflater
+        inflater.inflate(R.menu.donate_menu, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.menu_history -> {
+                startActivity(HistoryDonateActivity::class.java)
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+
     }
 }
