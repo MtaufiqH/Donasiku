@@ -9,11 +9,16 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import id.taufiq.donasiku.R
 import id.taufiq.donasiku.adapter.DonationAdapter
 import id.taufiq.donasiku.viewmodel.DonasiViewModel
+import id.taufiq.donasiku.viewmodel.DonasiViewModelFactory
 import kotlinx.android.synthetic.main.activity_history_donate.*
 
 class HistoryDonateActivity : AppCompatActivity() {
 
-    private val viewmodel by viewModels<DonasiViewModel>()
+    val factory  by lazy {
+        val app  = application
+        DonasiViewModelFactory(app)
+    }
+    private val viewmodel by viewModels<DonasiViewModel>{factory}
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_history_donate)
@@ -22,8 +27,7 @@ class HistoryDonateActivity : AppCompatActivity() {
             recyclerView_history.apply {
                 layoutManager = LinearLayoutManager(this@HistoryDonateActivity)
                 adapter = DonationAdapter(it) {
-                    Toast.makeText(this@HistoryDonateActivity, "you clicked me", Toast.LENGTH_SHORT)
-                        .show()
+
                 }
             }
 

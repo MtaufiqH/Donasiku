@@ -7,10 +7,15 @@ import androidx.appcompat.app.AppCompatActivity
 import id.taufiq.donasiku.R
 import id.taufiq.donasiku.data.network.response.DonasiItem
 import id.taufiq.donasiku.viewmodel.DonasiViewModel
+import id.taufiq.donasiku.viewmodel.DonasiViewModelFactory
 import kotlinx.android.synthetic.main.activity_add_donasi.*
 
  class AddDonasiActivity : AppCompatActivity() {
-    private val viewmodel by viewModels<DonasiViewModel>()
+     val factory  by lazy {
+         val app  = application
+         DonasiViewModelFactory(app)
+     }
+    private val viewmodel by viewModels<DonasiViewModel>{factory}
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_donasi)

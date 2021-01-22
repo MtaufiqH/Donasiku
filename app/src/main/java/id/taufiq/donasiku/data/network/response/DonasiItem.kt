@@ -12,7 +12,7 @@ import kotlinx.android.parcel.Parcelize
 @Entity(tableName = "donation_table")
 data class DonasiItem(
     @SerializedName("id")
-    @PrimaryKey(autoGenerate = true)
+    @PrimaryKey
     val id: String,
 
     @ColumnInfo(name = "created_at")

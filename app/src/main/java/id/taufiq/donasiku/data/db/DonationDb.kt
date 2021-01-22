@@ -27,8 +27,7 @@ abstract class DonationDb : RoomDatabase() {
                     context,
                     DonationDb::class.java,
                     DB_NAME
-                )
-                    .build()
+                ).build()
             }
             return INSTANCE!!
         }
