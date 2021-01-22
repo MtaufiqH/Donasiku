@@ -59,4 +59,10 @@ class DonasiViewModel(application: Application) : AndroidViewModel(application) 
         }
     }
 
+    fun deleteDonation(){
+        viewModelScope.launch {
+            repo.deleteDonate()
+        }
+    }
+
 }

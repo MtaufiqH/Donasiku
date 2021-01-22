@@ -10,7 +10,11 @@ import id.taufiq.donasiku.data.network.response.DonasiItem
 class DonateRepository(private val donateDao: DonationDao) {
     val getAllDonation = donateDao.getAllDonation()
 
-    suspend fun insertDonate(donate: DonasiItem){
+    suspend fun insertDonate(donate: DonasiItem) {
         donateDao.insertDonation(donate)
+    }
+
+    suspend fun deleteDonate() {
+        donateDao.deleteAllHistory()
     }
 }
