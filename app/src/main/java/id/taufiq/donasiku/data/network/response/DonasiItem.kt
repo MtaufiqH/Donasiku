@@ -1,4 +1,4 @@
-package id.taufiq.donasiku.data.response
+package id.taufiq.donasiku.data.network.response
 
 
 import android.os.Parcelable

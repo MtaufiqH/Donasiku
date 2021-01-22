@@ -1,4 +1,4 @@
-package id.taufiq.donasiku.data.builder
+package id.taufiq.donasiku.data.network.response.builder
 
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

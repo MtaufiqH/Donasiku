@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import id.taufiq.donasiku.R
-import id.taufiq.donasiku.data.response.DonasiItem
+import id.taufiq.donasiku.data.network.response.DonasiItem
 import kotlinx.android.synthetic.main.activity_add_donasi.*
 
 class AddDonasiActivity : AppCompatActivity() {

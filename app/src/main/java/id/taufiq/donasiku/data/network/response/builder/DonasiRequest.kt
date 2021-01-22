@@ -1,6 +1,6 @@
-package id.taufiq.donasiku.data.builder
+package id.taufiq.donasiku.data.network.response.builder
 
-import id.taufiq.donasiku.data.response.DonasiItem
+import id.taufiq.donasiku.data.network.response.DonasiItem
 import retrofit2.Response
 import retrofit2.http.GET
 

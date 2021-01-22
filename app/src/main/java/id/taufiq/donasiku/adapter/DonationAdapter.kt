@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import id.taufiq.donasiku.R
-import id.taufiq.donasiku.data.response.DonasiItem
+import id.taufiq.donasiku.data.network.response.DonasiItem
 import id.taufiq.donasiku.utils.formatRupiahs
 import kotlinx.android.synthetic.main.donasi_list.view.*
 

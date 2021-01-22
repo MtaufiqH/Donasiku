@@ -2,11 +2,10 @@ package id.taufiq.donasiku.views
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import id.taufiq.donasiku.R
-import id.taufiq.donasiku.data.response.DonasiItem
+import id.taufiq.donasiku.data.network.response.DonasiItem
 import id.taufiq.donasiku.utils.formatRupiahs
 import kotlinx.android.synthetic.main.activity_detail.*
 

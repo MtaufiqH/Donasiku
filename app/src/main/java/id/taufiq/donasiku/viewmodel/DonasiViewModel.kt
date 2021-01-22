@@ -1,13 +1,12 @@
 package id.taufiq.donasiku.viewmodel
 
 import android.util.Log
-import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import id.taufiq.donasiku.data.builder.myDonations
-import id.taufiq.donasiku.data.response.DonasiItem
+import id.taufiq.donasiku.data.network.response.builder.myDonations
+import id.taufiq.donasiku.data.network.response.DonasiItem
 import kotlinx.coroutines.launch
 import retrofit2.HttpException
 
